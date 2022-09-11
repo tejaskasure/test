@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <style>
+        body{
+            margin: 0;
+            background-color:#0f171e ;
+        }
+        #navbar{
+            border: 1px solid #1b2530;
+            height: 78px;
+            background-color:#1b2530;
+            display: flex;
+            align-items: center;
+            
+        }
+        #logo{
+           height:34px;
+           margin-left:50px;
+           margin-top:-5px;
+           cursor: pointer;
+        }
+        #primary-components{
+            /* border: 1px solid white; */
+            height: 80px;
+            width: 82%;
+            margin-left:25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        #components{
+            /* border: 1px solid white; */
+            height: 50px;
+            display: flex;
+            width: 60%;
+            margin-top:-12px;
+        }
+        #components>p{
+            color:#d8dbde;
+            margin-right:30px;
+            font-size: 17px;
+            font-family: Amazon Ember,Amazon Arabic Ember,Arial,sans-serif!important;
+            cursor: pointer;
+            font-weight:500;
+        }
+        #cate{
+            color: white;
+            background-color: #1b2530;
+            font-size: 17px;
+            font-family: Amazon Ember,Amazon Arabic Ember,Arial,sans-serif!important;
+            border: none;
+            cursor: pointer;
+        }
+        #search{
+            border: 1px solid #697d89;
+            height:42px;
+            width: 22%;
+            margin-top:-2px;
+            display: flex;
+            align-items: center;
+            background-color: #161d25;
+        }
+        #search-logo{
+            width: 34px;
+        }
+        #search-text{
+            padding: 5px;
+            background-color: #161d25;
+            border: none;
+            font-size:17px;
+            font-family: Amazon Ember,Amazon Arabic Ember,Arial,sans-serif!important;
+            color:white;
+            outline: none;
+            cursor: pointer;
+        }
+        #movie-poster{
+            /* border: 1px solid; */
+            height: 310px;
+            
+        }
+        .swiper{
+            width: 100%;
+            height: fit-content;
+        }
+        .swiper-slide img {
+            width: 100%;
+        }
+        .swiper .swiper-button-prev, .swiper .swiper-button-next{
+            color: white;
+        }
+        .swiper .swiper-pagination-bullet-active{
+            background:white;
+            height: 12px;
+            width: 12px;
+        }
+        #movie{
+            /* border: 1px solid white; */
+            height: 200px;
+            width: 99%;
+            margin-left: 3%;
+            display:flex;
+            justify-content:space-around;
+            align-items: center;
+
+        }
+        #Continue-watching{
+            color: white;
+            font-size: 19px;
+            font-weight: 700;
+            line-height: 24px;
+            padding: 0;
+            font-family:Amazon Ember,Amazon Arabic Ember,Arial,sans-serif!important;
+            margin-top: 2%;
+            margin-left:3%;
+        }
+        #movie img{
+            width:19.5%;
+            height:180px;
+            cursor: pointer;
+        }
+        #movie video{
+            width:19.5%;
+            height:180px;
+            cursor: pointer;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div id="navbar">
+        <img src="https://amazonuk.gcs-web.com/system/files-encrypted/nasdaq_kms/inline-images/Prime_Video_Logo.png" id="logo">
+        <div id="primary-components">
+           <div id="components">
+            <p>Home</p>
+            <p>Store</p>
+            <p>Channels</p>
+            <p> <select name="" id="cate">
+                <option value="">Categories</option>
+            </select></p>
+            <p>My Stuff</p>
+           </div>
+           <div id="search">
+            <img src="https://www.thinkafrica.fi/wp-content/uploads/2019/04/search-icon.png" id="search-logo">
+            <input oninput="getMovie()" type="search" id="search-text" placeholder="Search">
+           </div>
+        </div>
+    </div>
+
+    <div id="movie-poster">
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><img src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_LOTRTROP_HallofHeroes/f35bf8ae-7528-44b1-b65c-015a4c70a082._UR3000,600_SX1500_FMwebp_.jpeg" ></div>
+              <div class="swiper-slide"><img src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_FantasticBeastsS3_Launch/d734cee8-defd-41cc-bd68-1bfdc4eb4929._UR3000,600_SX1500_FMwebp_.jpeg" ></div>
+              <div class="swiper-slide"><img src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_TVOD_JurassicWorldDominion_149/f76ad750-4668-4806-8dfa-153566463dfe._UR3000,600_SX1500_FMwebp_.jpeg" ></div>
+              <div class="swiper-slide"><img src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_CROW_UN_TOTWalkingDead_AP/e26a88db-3d18-4f09-ac19-ae6b1fdbf6d2._UR3000,600_SX1500_FMwebp_.jpeg" ></div>
+              <div class="swiper-slide"><img src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_Shamshera_Launch/524fe23c-55b8-46b9-a764-67a1d6fc5fc2._UR3000,600_SX1500_FMwebp_.jpeg" ></div>
+              <div class="swiper-slide"><img src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_Samaritan_Launch/9b084b6f-a786-4ed4-bd03-4e67ced0dd2d._UR3000,600_SX1500_FMwebp_.jpeg" ></div>
+              <div class="swiper-slide"><img src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_CROW_UN_Secretsofkohinoor_DP/d0d47290-9aa0-4c49-828e-e05ee575dcf2._UR3000,600_SX1500_FMwebp_.jpeg" ></div>
+              <div class="swiper-slide"><img src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_TVOD_ZackSnyderJusticeLeague/6450b104-9933-41d6-ae2d-0c3f446b8159._UR3000,600_SX1500_FMwebp_.jpeg" ></div>
+              <div class="swiper-slide"><img src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_ImmatureS2_Launch/f0018857-a610-414a-8d7f-e36c3a83a09b._UR3000,600_SX1500_FMwebp_.jpeg" ></div>
+              <div class="swiper-slide"><img src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_CROW_UN_MinusOne_LP/e68c8350-5483-47bc-8795-ba8e62fd035a._UR3000,600_SX1500_FMwebp_.jpeg" ></div>
+              <div class="swiper-slide"><img src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_TVOD_TopGunMaverick/2b8ef907-7906-4b01-b9a1-a658072d7b9a._UR3000,600_SX1500_FMwebp_.jpeg" ></div>
+              <div class="swiper-slide"><img src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_LaFortunaS1_Launch/ba73b85e-7a7f-464e-a95d-c42b813da6cd._UR3000,600_SX1500_FMwebp_.jpeg" ></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+         
+          </div>
+    </div>
+    <h2 id="Continue-watching">Continue watching</h2>
+    <div id="movie">
+        <img src="https://m.media-amazon.com/images/S/pv-target-images/2e7441722738bb00c19e9b477d33c3f54d73cb24e2fa251e1ef11109b8bda735._UR1920,1080_SX356_FMwebp_.jpg" alt="">
+        <img src="https://m.media-amazon.com/images/S/pv-target-images/ac9d1082fe0bdb0cf52b8bd8171d897fc08960f4560073acaf979ff345e3f4d0._UR1920,1080_SX356_FMwebp_.jpg" alt="">
+        <img src="https://m.media-amazon.com/images/S/pv-target-images/d216e32f886ef686d46a118ef8b9de3b5af4b2b1d63f936712f7e1542cf66a78._UR1920,1080_SX356_FMwebp_.jpg" alt="">
+        <img src="https://m.media-amazon.com/images/S/pv-target-images/06b6bdb1f0c9f56d632b9ce6ccafa23e44776a54448db954f764b1bc3b03e199._UR1920,1080_SX356_FMwebp_.jpg" alt="">
+        <img src="https://m.media-amazon.com/images/S/pv-target-images/7ced95368eb89af9ee93f6b2b6bb3d400a6be38024eac30f99f58abded933948._UR1920,1080_SX356_FMwebp_.jpg" alt="">
+    </div>
+    <h2 id="Continue-watching">Recommended movies</h2>
+    <div id="movie">
+        <video src="https://s3.ll.videorolls.row.aiv-cdn.net/ww_sin/1805/72e8/ee37/4c73-9545-78eebc4cee2f/e9760b43-a2ed-4d21-b5b1-4b84e34ffa7d_video_480p_900kbps_audio_aaclc_128kbps.mp4" loop autoplay muted></video>
+        <video src="https://s3.ll.videorolls.row.aiv-cdn.net/ww_sin/ef59/4270/f307/4a23-95cd-f44bc3245d64/9b0052d9-c9e8-400b-bca5-c01a659de957_video_480p_900kbps_audio_aaclc_128kbps.mp4" loop autoplay muted></video>
+        <img src="https://m.media-amazon.com/images/S/pv-target-images/6091e32ccd5ece37bb8a1c86b996b547d40ea05ec75408252e19e7fa5fd773e0._UR1920,1080_SX356_FMwebp_.jpg"></img>
+        <img src="https://m.media-amazon.com/images/S/pv-target-images/5c984341c017ba1e178d30d9f6f403ed58bf39ced03e875c0e0fa7d0a999ae0d._UR1920,1080_SX399_.jpg" alt="">
+        <video src="https://s3-bom-ww.cf.trailer.row.aiv-cdn.net/bf0b/eae7/8cc4/4846-9b3b-f14f30bcd52a/dfd6f8a8-039e-4533-bb8b-0c457c42986b_video_900_audio_aaclc_128.mp4?Expires=1662836363&Signature=BjhradbgpiN4N7g~LIeNEnZz1yO4c9I8OSTeaBBxKXw9VvvMNxOe4MkqhsDVNXsxX1NSTKeQ~l4L67hYLN-cA2savla1VubaJUHwWtD6cyxCKRM1d-JUZcIqCvKleUdQkg49IrOncrJi-lP3U83fmf63nZG2ytDIj1Vq~ajcokB9fAbGd0UGQU~N56QsEiYmTeA7HuQcmFycdu0TcI75GNJJIDwbRg7zbl1sdYUojdiqftj7C7GMHnpxBMwbW2xLVMp2tbtPElnKiHhkSWJoUfVXIkGe8Vhvzz-TeOxpOx5p9eGbfG5V-7zk7alpGQ7Ag5XwDTYaIJ3W58M4klWhsA__&Key-Pair-Id=APKAJIYEUF5P2E3CCYTA" loop autoplay muted></video>
+    </div>
+    
+    <div id="movie">
+        <img src="https://m.media-amazon.com/images/S/pv-target-images/966db6e480ac4ac3d8369c0b3ac53b732e4ac198b9648416f3b56c4ddebd905c._UR1920,1080_SX356_FMwebp_.jpg" alt="">
+        <img src="https://m.media-amazon.com/images/S/pv-target-images/5cd1ee884e82c77f3d00b27be5101794b7cfb789cbe5a45ac642132b107c7b2c._UR1920,1080_SX356_FMwebp_.jpg" alt="">
+        <img src="https://m.media-amazon.com/images/S/pv-target-images/2e7441722738bb00c19e9b477d33c3f54d73cb24e2fa251e1ef11109b8bda735._UR1920,1080_SX356_FMwebp_.jpg" alt="">
+        <img src="https://m.media-amazon.com/images/S/pv-target-images/91af93147109c00d05e4ff63bb9c10316ed4acb3922d3bc353c653dfce658fdd._UR1920,1080_SX356_FMwebp_.jpg" alt="">
+        <video src="https://s3-iad-2.cf.trailer.row.aiv-cdn.net/3169/78f1/2325/471a-be0a-ce4066028326/8044a29b-dcfb-4d57-b4c3-e10fe7805859_video_900_audio_aaclc_128.mp4?Expires=1662836512&Signature=qNIxxY~b--W0hd3nZgTefl~XL3VsQEBfxUAYkDmLFJbrpWQcdc7H~17vHzrcQdqPcN22ionOI~AFyln25ccxl-E4efQmUrACz4nL3q8iksQPwc9SAkbuT1mNST5FeaDy3WZ7qBYn6qnSB5YjqruUQAzuoQXnj4D~Z6t3RZNZBA~Gu~SjHL9KXQg5p2Ij9QYELi2xLIPCY~V8M136kKDDPxTT4hWWbIROPiREGe6By1vS~tmLR9VjVX-mreyBo1iD8nPNY3ZneH8VdUmjK1QE0zZvSCiHzux3BKrG2yhNHk7yJRcUvBh0Lbj3s74va1fWEPl-6zm1T1NXAxleO-bNhw__&Key-Pair-Id=APKAJIYEUF5P2E3CCYTA" loop autoplay muted></video>
+    </div>
+    
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+    loop: true,
+  
+    pagination: {
+      el: '.swiper-pagination',
+      clickable:true,
+    },
+  
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+  });
+</script>
+</body>
+</html>
+<script src="./index.js"></script>
